@@ -1,0 +1,22 @@
+<div class="form-group search-form-wrapper collapsed">
+	<div class="input-group search-form-group" data-ng-class="{'executed': isSearchExecuted()}">
+		<input type="text" class="form-control search-form-input executed" data-ng-model="search" data-ng-click="openSearch()" />
+		<span class="input-group-addon" data-ng-click="openSearch()" data-ng-if="! isSearchExecuted()">
+			<i class="fa fa-search"></i>
+		</span>
+		<span class="input-group-addon" data-ng-click="cleanSearch()" data-ng-if="isSearchExecuted()">
+			<i class="fa fa-close"></i>
+		</span>
+	</div>
+</div>
+<div class="form-group search-form-wrapper expanded bs-left-bottom">
+	<div class="input-group search-form-group expanded">
+		<input type="text" class="form-control search-form-input expanded" data-ng-model="search" />
+		<span class="input-group-addon" data-ng-click="executeSearch()">
+			<i class="fa fa-check"></i>
+		</span>
+		<span class="input-group-addon" data-ng-click="closeSearch()">
+			<i class="fa fa-close"></i>
+		</span>
+	</div>
+</div>

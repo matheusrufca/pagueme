@@ -1,0 +1,29 @@
+﻿
+<h1>Gênero</h1>
+<div>
+	<form>
+		<input id="id" name="id" ng-model="genre.id" type="hidden" />
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input id="name" name="name" ng-model="genre.name" class="form-control" placeholder="Name" type="text" />
+		</div>
+
+		<button type="submit" ng-click="save(genre)" class="btn btn-primary">Save</button>
+	</form>
+
+	<h3>Object Tags <small>(with grouping)</small></h3>
+	<ui-select multiple tagging="ctrl.tagTransform" ng-model="ctrl.multipleDemo.selectedPeople" theme="bootstrap" ng-disabled="ctrl.disabled" style="width: 800px;" title="Choose a person">
+		<ui-select-match placeholder="Select person...">{{$item.name}} &lt;{{$item.email}}&gt;</ui-select-match>
+		<ui-select-choices repeat="person in ctrl.people | propsFilter: {name: $select.search, age: $select.search}" group-by="'country'">
+			<div ng-if="person.isTag" ng-bind-html="(person.name | highlight: $select.search) +' (new)'"></div>
+			<div ng-if="!person.isTag" ng-bind-html="person.name + person.isTag| highlight: $select.search"></div>
+			<small>
+				email: {{person.email}}
+				age: <span ng-bind-html="''+person.age | highlight: $select.search"></span>
+			</small>
+		</ui-select-choices>
+	</ui-select>
+	<p>Selected: </p>
+	<pre>selectedPeople = {{ctrl.multipleDemo.selectedPeople | json}}</pre>
+	<hr>
+</div>

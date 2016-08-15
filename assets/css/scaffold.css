@@ -1,0 +1,266 @@
+.full-width {
+	width: 100%;
+}
+
+.full-height {
+	height: 100%;
+}
+
+.full-screen {
+	width: 100%;
+	height: 100%;
+}
+
+hr.divisoria {
+	color: #CFCFCF;
+	background-color: #CFCFCF;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.relative {
+	position: relative;
+}
+
+.fixed {
+	position: fixed;
+}
+
+.block {
+	display: block;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.inline {
+	display: inline;
+}
+
+.center {
+	margin: auto;
+}
+
+.center-wrapper {
+	display: table;
+	width: 100%;
+}
+
+	.center-wrapper .center {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+		.center-wrapper .center .align {
+			text-align: center;
+			margin: auto;
+		}
+
+
+.center-align {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-o-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.display-hide {
+	display: none;
+}
+
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.top {
+	vertical-align: top;
+}
+
+.middle {
+	vertical-align: middle;
+}
+
+.bottom {
+	vertical-align: bottom;
+}
+
+.round-border {
+	border-radius: 5px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.fwhite {
+	color: white;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+
+.no-margin {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+.hidden-overflow {
+	text-rendering: optimizelegibility;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.overflow-auto {
+	overflow: auto;
+}
+
+hr {
+	margin-top: 0;
+	margin-bottom: 0;
+	border: none !important;
+	height: 1px;
+}
+
+a.div-link:hover {
+	text-decoration: none;
+}
+
+.col-centered {
+	float: none;
+	margin: 0 auto;
+}
+
+.img-border {
+	border: 1px solid #CFCFCF;
+}
+
+
+.f11 {
+	font-size: 11px;
+}
+
+
+.black {
+	color: black;
+}
+
+.dark-gray {
+	color: #333333;
+}
+
+
+
+
+.fgold {
+	color: #C49F47;
+}
+
+.gold {
+	background-color: #C49F47;
+}
+
+/* classe para adicionar ellipsis (...) em um elemento de texto */
+/* exige que o elemento seja 'display: inline-block' e tenha uma width definida; */
+
+
+
+@media print {
+	.no-print {
+		display: none !important;
+	}
+}
+
+
+
+.row-no-padding > [class*='col-'] {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/* remove gutter from bootstrap cols */
+.row.no-gutter > [class*='col-'] {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.v-align {
+	display: table;
+}
+
+.v-align  > * {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+
+.img-bg {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+
+
+
+
+.f10_pt {
+	font-size: 10pt;
+}
+
+.f11_pt {
+	font-size: 11pt;
+}
+
+.f12_pt {
+	font-size: 12pt;
+}
+
+.f14_pt {
+	font-size: 14pt;
+}
+
+.fgrey1 {
+	color: #B2B2B2;
+}
+
+.fgrey2 {
+	color: #C4CDDA;
+}
+
+.fgrey3 {
+	color: #DFDFDF;
+}
+
+.fgrey4 {
+	color: #4C5663;
+}
+
+
+.bg-blue2 {
+	background-color: #22272D;
+}

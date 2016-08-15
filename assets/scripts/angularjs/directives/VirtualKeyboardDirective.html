@@ -1,0 +1,103 @@
+<section class="virtual-keyboard">
+	<header class="virtual-keyboard-header" data-ng-show="isKeyboardType('amount')">
+		<div class="keyboard-header">
+			<div class="keyboard-header-label text-left">
+				<label data-ng-bind="keyboard.label"></label>
+			</div>
+			<div class="keyboard-header-display">
+				<input type="text" data-ng-model="keyboard.display" class="hidden-overflow float-left" disabled></input>
+				<span data-ng-bind="keyboard.simbol" class="float-right"></span>
+			</div>
+		</div>
+	</header>
+	<header class="virtual-keyboard-header" data-ng-show="isKeyboardType('currency')">
+		<div class="keyboard-header">
+			<div class="keyboard-header-label text-left">
+				<label data-ng-bind="keyboard.label"></label>
+			</div>
+			<div class="keyboard-header-display">
+				<input type="text" data-ng-model="keyboard.display" class="hidden-overflow float-left" disabled></input>
+				<span data-ng-bind="keyboard.simbol" class="float-right"></span>
+			</div>
+		</div>
+	</header>
+	<header class="virtual-keyboard-header" data-ng-show="isKeyboardType('discount')">
+		<div class="keyboard-header">
+			<div class="keyboard-header-label text-left">
+				<label data-ng-bind="keyboard.label"></label>
+			</div>
+			<div class="keyboard-header-display">
+				<span data-ng-bind="keyboard.simbol" class="float-left"></span>
+				<input type="text" data-ng-model="keyboard.display" class="hidden-overflow float-right" disabled></input>
+			</div>
+		</div>
+		<div class="keyboard-header">
+			<div class="keyboard-header-label text-right">
+				<label data-ng-bind="keyboard.outputLabel"></label>
+			</div>
+			<div class="keyboard-header-display">
+				<output data-ng-bind="keyboard.outputDisplay" class="hidden-overflow float-left"></output>
+				<span data-ng-bind="keyboard.outputSimbol" class="float-right"></span>
+			</div>
+		</div>
+	</header>
+	<header class="virtual-keyboard-header" data-ng-show="isAuthProgress()">
+		<div class="keyboard-header">
+			<div class="keyboard-header-label text-left">
+				<label>Senha</label>
+			</div>
+			<div class="keyboard-header-display">
+				<input type="password" data-ng-model="keyboard.display" class="hidden-overflow float-left" disabled></input>
+			</div>
+		</div>
+	</header>
+	<header class="virtual-keyboard-header" data-ng-show="isKeyboardType('identity')">
+		<div class="keyboard-header">
+			<div class="keyboard-header-label text-left">
+				<label data-ng-bind="keyboard.label"></label>
+			</div>
+			<div class="keyboard-header-display">
+				<input type="text" data-ng-model="keyboard.display" class="hidden-overflow float-left" disabled></input>
+				<span data-ng-bind="keyboard.simbol" class="float-right"></span>
+			</div>
+		</div>
+	</header>
+	<article class="virtual-keyboard-wrapper">
+	    <div class="row virtual-keyboard text-center">
+	        <div class="col-md-12">
+	            <div class="virtual-keyboard-row">
+	                <button class="btn btn-circle btn-lg btn-keyboard-key font-black bg-gold" value="1" data-ng-click="addDigit($event)">1</button>
+	                <button class="btn btn-circle btn-lg btn-keyboard-key font-black bg-gold" value="2" data-ng-click="addDigit($event)">2</button>
+	                <button class="btn btn-circle btn-lg btn-keyboard-key font-black bg-gold" value="3" data-ng-click="addDigit($event)">3</button>
+	            </div>
+	            <div class="virtual-keyboard-row">
+	                <button class="btn btn-circle btn-lg btn-keyboard-key font-black bg-gold" value="4" data-ng-click="addDigit($event)">4</button>
+	                <button class="btn btn-circle btn-lg btn-keyboard-key font-black bg-gold" value="5" data-ng-click="addDigit($event)">5</button>
+	                <button class="btn btn-circle btn-lg btn-keyboard-key font-black bg-gold" value="6" data-ng-click="addDigit($event)">6</button>
+	            </div>
+	            <div class="virtual-keyboard-row">
+	                <button class="btn btn-circle btn-lg btn-keyboard-key font-black bg-gold" value="7" data-ng-click="addDigit($event)">7</button>
+	                <button class="btn btn-circle btn-lg btn-keyboard-key font-black bg-gold" value="8" data-ng-click="addDigit($event)">8</button>
+	                <button class="btn btn-circle btn-lg btn-keyboard-key font-black bg-gold" value="9" data-ng-click="addDigit($event)">9</button>
+	            </div>
+	            <div class="virtual-keyboard-row">
+	                <button class="btn btn-circle btn-lg btn-keyboard-key font-black bg-gold" data-ng-click="removeDigit()">C</button>
+	                <button class="btn btn-circle btn-lg btn-keyboard-key font-black bg-gold" value="0" data-ng-click="addDigit($event)">0</button>
+	                <button class="btn btn-circle btn-lg btn-keyboard-key font-black bg-gold" value="." data-ng-click="addDigit($event)">,</button>
+	            </div>
+	        </div>
+	    </div>
+	</article>
+	<footer class="virtual-keyboard-footer">
+		<div class="subtotal-container inline-center">
+			<div class="session-commands">
+				<button class="btn btn-lg btn-circle btn-simetric bg-red font-white" data-ng-click="backwardFunction()">
+					<i class="fa fa-ban"></i>
+				</button>
+				<button class="btn btn-lg btn-circle btn-standard bg-green font-white uppercase" data-ng-click="forwardFunction()">
+					OK
+				</button>
+			</div>
+		</div>
+	</footer>
+</section>

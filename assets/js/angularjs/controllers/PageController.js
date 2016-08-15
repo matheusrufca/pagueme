@@ -1,0 +1,15 @@
+function PageController($rootScope, $scope, $timeout, $stateParams) {
+
+
+
+
+
+	$rootScope.$watch('$state', function (newValue, oldValue) {
+		//console.log([newValue.current.name, ' - ', oldValue.current.name].join(''));
+	});
+
+	$rootScope.$on('$stateChangeStart',
+		function (event, toState, toParams, fromState, fromParams) {
+			console.debug(toState.name)
+		});
+};

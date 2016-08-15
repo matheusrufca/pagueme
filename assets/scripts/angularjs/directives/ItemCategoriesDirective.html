@@ -1,0 +1,14 @@
+<ul data-slide-speed="200" data-auto-scroll="true" data-keep-expanded="false" class="page-sidebar-menu">
+	<li class="nav-item" data-ng-repeat="itemCategory in itemCategories">
+		<a class="nav-link nav-toggle" href="javascript:;" data-ng-click="toogleCategory(itemCategory)" data-ng-class="{'master-active': isCategorySelected(itemCategory)}">
+			<span class="title" data-ng-bind="itemCategory.name"></span>
+		</a>
+		<ul class="sub-menu">
+			<li data-ng-repeat="subcategory in itemCategory.subcategories">
+				<a href="javascript:;" data-ng-click="toogleCategory(subcategory)" data-ng-class="{'master-active': isCategorySelected(subcategory)}">
+					<span data-ng-bind="subcategory.name"></span>
+				</a>
+			</li>
+		</ul>
+	</li>
+</ul>

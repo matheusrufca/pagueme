@@ -1,4 +1,4 @@
-﻿/// <reference path="../../views/management/genres.html" />
+﻿
 
 var AngularInit = (function () {
 	var self = {};
@@ -12,6 +12,10 @@ var AngularInit = (function () {
 
 
 	function _initModule() {
+
+
+
+
 		/* Metronic App */
 		app = angular.module('app', [
 			'ngAnimate',
@@ -23,19 +27,18 @@ var AngularInit = (function () {
 			'ui.select',
 			'devel'
 		]);
-
-
-
-		
-
-
 	};
 
 
 	function _initModuleConfig() {
-		app.run(['$rootScope', '$window', 'authService', function ($rootScope, $window, authService) {
-			$rootScope.user = {};
+		initFacebookConfigs(app);
+		initUiRouterConfigs(app);
+	};
 
+
+
+	function initFacebookConfigs(app) {
+		app.run(['$rootScope', '$window', 'authService', function ($rootScope, $window, authService) {
 			$window.fbAsyncInit = function () {
 				// Executed when the SDK is loaded
 
@@ -68,6 +71,56 @@ var AngularInit = (function () {
 				ref.parentNode.insertBefore(js, ref);
 
 			}(document));
+		}]);
+	}
+
+
+	function initUiRouterConfigs(app) {
+		app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+			$urlRouterProvider.otherwise("/");
+			$urlRouterProvider.when('/pagueme', '/');
+
+
+			$stateProvider
+				.state('home', {
+					url: '/',
+					templateUrl: 'assets/views/home.html'
+				})
+				.state('login', {
+					url: '/login',
+					templateUrl: 'assets/views/login.html'
+				});
+
+
+			$urlRouterProvider.when('/pagueme', '/');
+			$urlRouterProvider.otherwise("/");
+
+		}]);
+
+		// fix view item cache 
+		app.config(['$provide', function ($provide) {
+			// Set a suffix outside the decorator function 
+			var cacheBuster = Date.now().toString();
+			
+
+			$provide.decorator('$templateFactory', ['$delegate', function ($delegate) {
+				var fromUrl = angular.bind($delegate, $delegate.fromUrl);
+				$delegate.fromUrl = function (url, params) {
+					if (url !== null && angular.isDefined(url) && angular.isString(url)) {
+						url += (url.indexOf("?") === -1 ? "?" : "&");
+						url += "v=" + cacheBuster;
+					}
+
+					return fromUrl(url, params);
+				};
+
+				return $delegate;
+			}]);
+		}]);
+
+		app.run(['$rootScope', '$state', '$stateParams', function ($rootScope, $state, $stateParams) {
+			$rootScope.$state = $state;
+			$rootScope.$stateParams = $stateParams;
 		}]);
 	};
 

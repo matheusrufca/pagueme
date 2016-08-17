@@ -26,9 +26,13 @@ body {
 
 header {
 	display: table-header-group;
-	.logo { }
+
+	.logo {
+	}
 
 	nav {
+
+
 		ul.nav {
 			float: right;
 
@@ -46,4 +50,11 @@ footer.page-footer {
 
 main.page-content {
 	height: 100%;
+}
+
+
+.nav-bar {
+	padding: 20px 0;
+	font-size: 14px;
+	background-color: #CFCFCF;
 }

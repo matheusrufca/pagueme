@@ -22,17 +22,23 @@ body {
 	content: url(http://austria2australia.com/wp-content/uploads/2015/09/logo_placeholder.png);
 }
 
-	
 
-header.page-header {
+
+header {
 	display: table-header-group;
-
 	.logo { }
 
-	.nav, nav ul > li a {
-		width: auto !important;
+	nav {
+		ul.nav {
+			float: right;
+
+			> li a {
+				width: auto !important;
+			}
+		}
 	}
 }
+
 
 footer.page-footer {
 	display: table-footer-group;
@@ -41,6 +47,3 @@ footer.page-footer {
 main.page-content {
 	height: 100%;
 }
-
-
-

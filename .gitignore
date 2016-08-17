@@ -1,0 +1,7 @@
+*.config
+*.sln
+*.suo
+bin/*
+teste.html
+compilerconfig.json
+compilerconfig.json.defaults

@@ -1,53 +1,54 @@
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
+﻿ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
 
 .pointer {
-  cursor: pointer; }
+    cursor: pointer; }
 
 html, body {
-  height: 100%;
-  overflow: auto;
-  overflow-x: hidden; }
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden; }
 
 body {
-  display: table;
-  height: 100%;
-  width: 100%; }
-  body > [class*='page-'],
-  body > [class*='container'] {
-    display: table-row;
-    /*min-height: 1px;*/ }
+    display: table;
+    height: 100%;
+    width: 100%; }
+    body > [class*='page-'],
+    body > [class*='container'] {
+        display: table-row;
+        /*min-height: 1px;*/ }
 
 .logo {
-  width: 100%;
-  content: url(http://austria2australia.com/wp-content/uploads/2015/09/logo_placeholder.png); }
+    width: 100%;
+    content: url(http://austria2australia.com/wp-content/uploads/2015/09/logo_placeholder.png); }
 
-header.page-header {
-  display: table-header-group; }
-  header.page-header .nav, header.page-header nav ul > li a {
-    width: auto !important; }
+header {
+    display: table-header-group; }
+    header nav ul.nav {
+        float: right; }
+        header nav ul.nav > li a {
+            width: auto !important; }
 
 footer.page-footer {
-  display: table-footer-group; }
+    display: table-footer-group; }
 
 main.page-content {
-  height: 100%; }
+    height: 100%; }
 
 .sidebar {
-  background-color: #AEAEAE;
-  height: 100%; }
+    background-color: #AEAEAE;
+    height: 100%; }
 
 header,
 footer {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  background-color: #222222 !important;
-  color: #FFFFFF; }
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    background-color: #222222 !important;
+    color: #FFFFFF; }
 
 .content {
-  background-color: #CFCFCF;
-  height: 100%; }
+    background-color: #CFCFCF;
+    height: 100%; }
 
-/*# sourceMappingURL=index.css.map */
